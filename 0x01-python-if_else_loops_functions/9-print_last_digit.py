@@ -2,10 +2,9 @@
 
 
 def print_last_digit(number):
-	if isinstance(number, int):
-		number = str(number)
-		last = number[len(number) - 1]
-		print(last, end='')
-		return (last)
-	else:
-		exit
+    if isinstance(number, int):
+        number = str(number)
+        last = number[len(number) - 1]
+        print(last, end='')
+        return (last)
+    return("")

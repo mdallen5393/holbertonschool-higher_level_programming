@@ -2,9 +2,9 @@
 
 
 def print_last_digit(number):
-    if isinstance(number, int):
-        number = str(number)
-        last = number[len(number) - 1]
-        print(last, end='')
-        return (last)
-    raise Exception("Invalid input")
+    if number >= 0:
+        last = number % 10
+    else:
+        last = (number*(-1)) % 10
+    print(last, end='')
+    return(last)

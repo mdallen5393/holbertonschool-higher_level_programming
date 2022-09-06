@@ -19,3 +19,4 @@ def roman_to_int(roman_string):
             else:
                 num += nums[rstr[i]]
         return num
+    return (0)

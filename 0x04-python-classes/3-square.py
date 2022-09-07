@@ -2,9 +2,6 @@
 """This is the square class!"""
 
 
-from ctypes import sizeof
-
-
 class Square:
     """This class defines a square"""
     def __init__(self, size=0):
@@ -19,10 +16,12 @@ class Square:
         """Prints area"""
         return self.__size ** 2
 
+    @property
     def size(self):
         """Getter for a square's size"""
         return self.__size
 
+    @size.setter
     def size(self, value):
         """Setter for a square's size"""
         if type(value) != int:

@@ -49,7 +49,11 @@ and should raise a ``TypeError`` upon recieving an invalid type
 
     >>> add_integer(1, None)
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: b must be an integer
+
+    >>> add_integer(float('inf'), 3)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 
 Argument Number
 ===============

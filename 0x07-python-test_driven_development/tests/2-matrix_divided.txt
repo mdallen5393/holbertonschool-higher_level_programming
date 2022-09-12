@@ -34,7 +34,7 @@ of lists of integers or floats.
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-	>>> matrix_divided(None, 3)
+	>>> matrix_divided([[],[]], 3)
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 

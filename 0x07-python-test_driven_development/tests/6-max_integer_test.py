@@ -9,6 +9,7 @@ class TestMaxInteger(unittest.TestCase):
         # Make sure value errors are raised when necessary
         self.assertEqual(max_integer("string"), 't')
         self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([4]), 4)
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
         self.assertEqual(max_integer([1.0, 3]), 3)

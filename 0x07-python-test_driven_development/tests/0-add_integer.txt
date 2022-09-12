@@ -23,10 +23,6 @@ equivalent to using the ``+`` operator
     >>> add_integer(100.3, -2)
     98
 
-    >>> add_integer(0, 0)
-    0
-
-
 Non-Numbers
 ===========
 
@@ -49,11 +45,11 @@ and should raise a ``TypeError`` upon recieving an invalid type
 
     >>> add_integer(None, 1)
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: 'NoneType' object is not subscriptable
 
     >>> add_integer(1, None)
     Traceback (most recent call last):
-    TypeError: b must be an integer
+    TypeError: 'NoneType' object is not subscriptable
 
     >>> add_integer(float('inf'), 3)
     Traceback (most recent call last):

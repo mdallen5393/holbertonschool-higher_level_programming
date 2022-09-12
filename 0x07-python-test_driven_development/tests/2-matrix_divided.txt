@@ -60,3 +60,7 @@ an integer or float.
 	>>> matrix_divided([[1, 2, 3], [4, 5, 6]])
 	Traceback (most recent call last):
 	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	>>> matrix_divided([[1, 2, 3], [3, 4, 5]], None)
+	Traceback (most recent call last):
+	TypeError: div must be a number

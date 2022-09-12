@@ -56,7 +56,7 @@ arguments are used
 
     >>> add_integer(1, 1, 1)
     Traceback (most recent call last):
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+    TypeError: add_integer() takes from 1 to 2 positional arguments but ... were given
 
     >>> add_integer()
     Traceback (most recent call last):

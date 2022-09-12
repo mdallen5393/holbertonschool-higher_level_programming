@@ -1,0 +1,32 @@
+=====================
+Module: 3-say_my_name
+=====================
+
+Types
+=====
+``say_my_name()`` prints the string `My first name is
+<first name> <last name>`.  first_name and last_name
+must both be strings. last_name is optional.
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+	>>> say_my_name("Bob")
+	My name is Bob
+
+	>>> say_my_name(3, "Smith")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("John", 3)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name("")
+	My name is  
+
+	>>> say_my_name("[[This is a long string", "test]]")
+	My name is [[This is a long string test]]

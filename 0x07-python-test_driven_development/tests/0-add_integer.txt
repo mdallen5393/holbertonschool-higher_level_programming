@@ -23,6 +23,10 @@ equivalent to using the ``+`` operator
     >>> add_integer(100.3, -2)
     98
 
+    >>> add_integer(0.0123456789012345678901234567890123456789, 0)
+    0
+
+
 Non-Numbers
 ===========
 

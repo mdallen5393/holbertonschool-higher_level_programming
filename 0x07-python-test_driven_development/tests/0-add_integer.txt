@@ -10,7 +10,7 @@ equivalent to using the ``+`` operator
 
 ::
 
-    >>> from 0-add_integer import add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(1, 2)
     3
 
@@ -53,9 +53,11 @@ arguments are used
 
     >>> add_integer(2)
     100
+
     >>> add_integer(1, 1, 1)
     Traceback (most recent call last):
-    TypeError: add_integer() takes from 1 to 2 positional arguments but ... were given
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
     >>> add_integer()
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'

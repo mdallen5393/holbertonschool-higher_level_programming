@@ -17,9 +17,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, 3)
         self.assertRaises(TypeError, max_integer, ["hi", 3, 6, 1])
 
-    def test_documentation(self):
-        self.assertTrue(len(__import__('6-max_integer').__doc__) > 1)
-        self.assertTrue(len((max_integer).__doc__) > 1)
-
 if __name__ == '__main__':
     unittest.main()

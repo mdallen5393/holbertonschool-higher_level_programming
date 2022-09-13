@@ -26,13 +26,9 @@ class Rectangle():
         return 2*self.__width + 2*self.__height
 
     def __str__(self):
-        string = ""
-        if 0 in (self.__width, self.__height):
-            return ""
-        for i in range(self.__height - 1):
-            string += "#" * self.__width + "\n"
-        string += "#" * self.__width
-        return string
+        # if 0 in (self.__width, self.__height):
+        #     return ""
+        return (self.__height * ("#" * self.__width + "\n") + ("#" * self.__width))
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)

@@ -18,12 +18,12 @@ class Rectangle():
         self.__height = height
 
     def area(self):
-        if 0 is (self.__width, self.__height):
+        if 0 in (self.__width, self.__height):
             return 0
         return self.__width * self.__height
 
     def perimeter(self):
-        if 0 is (self.__width, self.__height):
+        if 0 in (self.__width, self.__height):
             return 0
         return 2*self.__width + 2*self.__height
 

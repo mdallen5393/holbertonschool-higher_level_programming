@@ -13,6 +13,9 @@ Types
 ::
 
 	>>> bg = BaseGeometry()
+	>>> print(bg.__doc__)
+	 BaseGeometry class 
+
 	>>> bg.integer_validator("my_int", 12)
 
 	>>> bg.integer_validator("width", 89)

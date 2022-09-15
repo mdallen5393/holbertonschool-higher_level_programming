@@ -1,0 +1,27 @@
+=================
+Module: 1-my_list
+=================
+``MyList(list)`` is a class that inherits from `list` and adds
+a `print_sorted()` method.
+
+	>>> MyList = __import__('1-my_list').MyList
+
+Types
+=====
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
+	>>> my_list = MyList()
+	>>> my_list.extend([1, 4, 2, 3, 5])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	>>> my_list = MyList()
+	>>> my_list.extend([1, 2, 3, "hi"])
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'str' and 'int'

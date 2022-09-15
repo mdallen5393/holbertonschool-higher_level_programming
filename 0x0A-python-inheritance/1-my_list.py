@@ -3,7 +3,7 @@
 
 
 class MyList(list):
-	""" Class that extends `list` """
-	def print_sorted(self):
-		""" Print list in ascending order """
-		print(sorted(self))
+    """ Class that extends `list` """
+    def print_sorted(self):
+        """ Print list in ascending order """
+        print(sorted(self))

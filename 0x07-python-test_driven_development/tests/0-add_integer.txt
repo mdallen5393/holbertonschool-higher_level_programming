@@ -45,11 +45,11 @@ and should raise a ``TypeError`` upon recieving an invalid type
 
     >>> add_integer(None, 1)
     Traceback (most recent call last):
-    TypeError: 'NoneType' object is not subscriptable
+    TypeError: a must be an integer
 
     >>> add_integer(1, None)
     Traceback (most recent call last):
-    TypeError: 'NoneType' object is not subscriptable
+    TypeError: b must be an integer
 
     >>> add_integer(float('inf'), 3)
     Traceback (most recent call last):

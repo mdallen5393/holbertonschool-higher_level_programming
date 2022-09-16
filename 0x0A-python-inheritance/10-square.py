@@ -39,9 +39,9 @@ class Square(Rectangle):
         self.__size = size
 
     def area(self):
+        """ returns the area of the Square"""
         return self.__size ** 2
 
 def __str__(self):
-        """Returns the details of the rectangle
-        """
+        """ prints square dimensions """
         return("[Rectangle] {}/{}".format(self.__size, self.__size))

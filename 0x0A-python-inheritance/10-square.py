@@ -40,3 +40,8 @@ class Square(Rectangle):
 
     def area(self):
         return self.__size ** 2
+
+def __str__(self):
+        """Returns the details of the rectangle
+        """
+        return("[Rectangle] {}/{}".format(self.__size, self.__size))

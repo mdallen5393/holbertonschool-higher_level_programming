@@ -16,7 +16,7 @@ class Student:
         a Student instance
         """
         dict = vars(self)
-        if not attrs:
+        if attrs is None:
             return dict
 
         studentInfo = {}

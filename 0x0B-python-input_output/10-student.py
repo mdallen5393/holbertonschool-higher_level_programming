@@ -27,6 +27,4 @@ class Student:
         for item in attrs:
             if item in dict:
                 studentInfo[item] = dict[item]
-            else:
-                raise Exception()
         return studentInfo

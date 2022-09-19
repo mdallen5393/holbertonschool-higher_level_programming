@@ -21,8 +21,6 @@ class Student:
 
         studentInfo = {}
         for item in attrs:
-            try:
+            if item in dict:
                 studentInfo[item] = dict[item]
-            except:
-                Exception
         return studentInfo

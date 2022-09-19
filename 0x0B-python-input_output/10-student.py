@@ -19,8 +19,14 @@ class Student:
         if not attrs:
             return dict
 
+        for item in attrs:
+            if type(item) != str:
+                return dict
+
         studentInfo = {}
         for item in attrs:
             if item in dict:
                 studentInfo[item] = dict[item]
+            else:
+                raise Exception()
         return studentInfo

@@ -3,6 +3,10 @@
 
 
 def pascal_triangle(n):
+    """
+    Function that returns a list of lists containing
+    Pascal's Triangle.
+    """
     pascal = []
 
     for i in range(n):

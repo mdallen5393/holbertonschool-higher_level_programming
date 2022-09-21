@@ -13,7 +13,7 @@ class Square(Rectangle):
         """return string representation of Rectangle"""
         return '[' + type(self).__name__ + '] (' + str(self.id) \
             + ') ' + str(self.x) + '/' + str(self.y) + ' - ' \
-            + str(self.height)
+            + str(self.size)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""

@@ -35,13 +35,11 @@ class Base:
         """
         filename = cls.__name__ + ".json"
         dicList = []
-        for obj in list_objs:
-            dicList.append(obj.to_dictionary())
+        if list_objs is not None:
+            for obj in list_objs:
+                dicList.append(obj.to_dictionary())
 
         with open(filename, mode='w', encoding='utf-8') as f:
-            if list_objs is None:
-                f.write("[]")
-                return
             f.write(cls.to_json_string(dicList))
 
     @staticmethod

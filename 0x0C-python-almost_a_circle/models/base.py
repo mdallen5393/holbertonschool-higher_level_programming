@@ -2,6 +2,7 @@
 """base Module"""
 from ctypes import create_string_buffer
 import json
+from os import read
 
 
 class Base:
@@ -60,7 +61,8 @@ class Base:
         dicList = []
         filename = cls.__name__ + ".json"
         with open(filename, mode='r', encoding='utf-8') as f:
+            json_string = f.read()
             dicList = []
-            for item in json.load(f):
-                dicList.append(cls.create(**item))
+            for obj in cls.from_json_string(json_string):
+                dicList.append(cls.create(**obj))
         return dicList

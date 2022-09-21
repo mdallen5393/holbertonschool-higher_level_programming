@@ -33,28 +33,11 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if args:
-            if len(args) > 0:
-                self.id = args[0]
-            if len(args) > 1:
-                self.width = args[1]
-            if len(args) > 2:
-                self.height = args[2]
-            if len(args) > 3:
-                self.x = args[3]
-            if len(args) > 4:
-                self.y = args[4]
+        key = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, key[i], args[i])
         for key, value in kwargs.items():
-            if key == "id":
-                self.id = value
-            if key == "width":
-                self.width = value
-            if key == "height":
-                self.height = value
-            if key == "x":
-                self.x = value
-            if key == "y":
-                self.y = value
+            setattr(self, key, value)
 
     def to_dictionary(self):
         """

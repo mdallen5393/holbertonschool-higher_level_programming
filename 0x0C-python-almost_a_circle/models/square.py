@@ -17,24 +17,11 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-        if args:
-            if len(args) > 0:
-                self.id = args[0]
-            if len(args) > 1:
-                self.size = args[1]
-            if len(args) > 2:
-                self.x = args[2]
-            if len(args) > 3:
-                self.y = args[3]
+        key = ["id", "size", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, key[i], args[i])
         for key, value in kwargs.items():
-            if key == "id":
-                self.id = value
-            if key == "size":
-                self.size = value
-            if key == "x":
-                self.x = value
-            if key == "y":
-                self.y = value
+            setattr(self, key, value)
 
     def to_dictionary(self):
         """

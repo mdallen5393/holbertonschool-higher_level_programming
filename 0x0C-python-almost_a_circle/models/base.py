@@ -68,9 +68,12 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances from a .json file"""
         filename = cls.__name__ + ".json"
-        with open(filename, mode='r', encoding='utf-8') as f:
-            json_string = f.read()
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                json_string = f.read()
+                dicList = []
+                for obj in cls.from_json_string(json_string):
+                    dicList.append(cls.create(**obj))
+        except:
             dicList = []
-            for obj in cls.from_json_string(json_string):
-                dicList.append(cls.create(**obj))
         return dicList

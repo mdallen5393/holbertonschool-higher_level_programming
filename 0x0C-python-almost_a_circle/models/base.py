@@ -52,3 +52,12 @@ class Base:
         dummy = cls(1, 1, 0)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances from a .json file
+        """
+        filename = cls.__name__ + ".json"
+        with open(filename, mode='r', encoding='utf-8') as f:
+            return json.load(f)

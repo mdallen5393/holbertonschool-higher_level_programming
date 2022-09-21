@@ -57,6 +57,10 @@ class Rectangle(Base):
                 self.y = value
 
     def to_dictionary(self):
+        """
+        Returns dictionary representation of
+        Rectangle instance
+        """
         return self.__dict__
 
     @property

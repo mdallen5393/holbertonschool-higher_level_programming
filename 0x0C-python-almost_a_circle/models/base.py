@@ -42,7 +42,7 @@ class Base:
             if list_objs is None:
                 f.write("[]")
                 return
-            f.write(Base.to_json_string(dicList))
+            f.write(cls.to_json_string(dicList))
 
     @staticmethod
     def from_json_string(json_string):

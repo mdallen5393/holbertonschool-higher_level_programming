@@ -21,8 +21,7 @@ class Square(Rectangle):
             if len(args) > 0:
                 self.id = args[0]
             if len(args) > 1:
-                self.height = args[1]
-                self.width = args[1]
+                self.size = args[1]
             if len(args) > 2:
                 self.x = args[2]
             if len(args) > 3:
@@ -31,8 +30,7 @@ class Square(Rectangle):
             if key == "id":
                 self.id = value
             if key == "size":
-                self.width = value
-                self.height = value
+                self.size = value
             if key == "x":
                 self.x = value
             if key == "y":
@@ -41,14 +39,14 @@ class Square(Rectangle):
     @property
     def size(self):
         """Getter for size"""
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, value):
-        """Setter for __width"""
+        """Setter for __size"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value

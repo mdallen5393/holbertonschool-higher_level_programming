@@ -49,9 +49,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        print("DICTIONARY:" + str(dictionary))
         dummy = cls(1, 1, 0)
-        print("DUMMY:" + str(dummy))
-        dummy.update(dictionary)
-        print("DUMMY:" + str(dummy))
+        dummy.update(**dictionary)
         return dummy

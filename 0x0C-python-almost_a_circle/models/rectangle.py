@@ -61,7 +61,14 @@ class Rectangle(Base):
         Returns dictionary representation of
         Rectangle instance
         """
-        return self.__dict__
+        selfDict = {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        }
+        return selfDict
 
     @property
     def width(self):

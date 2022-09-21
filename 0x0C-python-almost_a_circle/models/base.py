@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """base Module"""
+from ctypes import create_string_buffer
 import json
 
 
@@ -58,6 +59,10 @@ class Base:
         """
         returns a list of instances from a .json file
         """
+        dicList = []
         filename = cls.__name__ + ".json"
         with open(filename, mode='r', encoding='utf-8') as f:
-            return json.load(f)
+            dicList = []
+            for item in json.load(f):
+                dicList.append(cls.create(**item))
+        return dicList

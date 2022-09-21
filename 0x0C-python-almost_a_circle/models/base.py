@@ -36,4 +36,11 @@ class Base:
             dicList.append(obj.to_dictionary())
 
         with open(filename, mode='w', encoding='utf-8') as f:
+            if list_objs is None:
+                f.write("[]")
+                return
             f.write(Base.to_json_string(dicList))
+
+    @staticmethod
+    def from_json_string(json_string):
+        pass

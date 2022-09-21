@@ -36,6 +36,19 @@ class Square(Rectangle):
             if key == "y":
                 self.y = value
 
+    def to_dictionary(self):
+        """
+        Returns dictionary representation of
+        Rectangle instance
+        """
+        selfDict = {
+            'id': self.id,
+            'x': self.x,
+            'size': self.size,
+            'y': self.y
+        }
+        return selfDict
+
     @property
     def size(self):
         """Getter for size"""

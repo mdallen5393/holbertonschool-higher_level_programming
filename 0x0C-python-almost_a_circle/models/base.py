@@ -64,7 +64,6 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """returns a list of instances from a .json file"""
-        dicList = []
         filename = cls.__name__ + ".json"
         with open(filename, mode='r', encoding='utf-8') as f:
             json_string = f.read()

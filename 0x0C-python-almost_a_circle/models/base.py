@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """base Module"""
-from ctypes import create_string_buffer
 import json
-from os import read
 
 
 class Base:
@@ -25,6 +23,11 @@ class Base:
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
+        if type(list_dictionaries) != list:
+            raise TypeError("list_dictionaries must be a list of dictionaries")
+        for dic in list_dictionaries:
+            if type(dic) is not dict:
+                raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
     @classmethod

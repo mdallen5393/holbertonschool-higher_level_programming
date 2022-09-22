@@ -83,4 +83,32 @@ class BaseTests(unittest.TestCase):
         self.assertEqual(self.square1.to_json_string(None), "[]")
         self.assertEqual(self.square1.to_json_string([]), "[]")
 
+    def test_save_to_file(self):
+        """
+        Method for testing the save_to_file method in the Base
+        class.
+        """
+        pass
 
+    def test_from_json_string(self):
+        """
+        Method for testing the from_json_string method in the Base
+        class.
+        """
+        pass
+
+    def test_create(self):
+        """
+        Method for testing the create method in the Base class.
+        """
+        pass
+
+    def test_load_from_file(self):
+        """
+        Method for testing the load_from_file method in the
+        Base class.
+        """
+        pass
+
+if __name__ == '__main__':
+    unittest.main()

@@ -3,8 +3,7 @@
 Unittest module for Rectangle class.
 """
 import unittest
-# TODO: max_integer = __import__('6-max_integer').max_integer
-
+from models.base import Base
 
 class test_rectangle(unittest.TestCase):
     """
@@ -15,6 +14,7 @@ class test_rectangle(unittest.TestCase):
         """
         Value unit tests.
         """
+        base1 = Base(10)
         # TODO: add self.assertEqual(max_integer("String"), 't')
         pass
 

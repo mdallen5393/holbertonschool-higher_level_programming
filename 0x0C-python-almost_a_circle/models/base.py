@@ -27,7 +27,8 @@ class Base:
             raise TypeError("list_dictionaries must be a list of dictionaries")
         for dic in list_dictionaries:
             if type(dic) is not dict:
-                raise TypeError("list_dictionaries must be a list of dictionaries")
+                err = "list_dictionaries must be a list of dictionaries"
+                raise TypeError(err)
         return json.dumps(list_dictionaries)
 
     @classmethod

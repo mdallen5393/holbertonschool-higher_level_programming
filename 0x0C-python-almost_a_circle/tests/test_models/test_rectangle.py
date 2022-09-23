@@ -2,6 +2,8 @@
 """
 Unittest module for Rectangle class.
 """
+from io import StringIO
+from unittest.mock import patch
 import unittest
 from models.rectangle import Rectangle
 
@@ -66,7 +68,12 @@ class test_rectangle(unittest.TestCase):
         """
         Method for testing the display method of the Rectangle class.
         """
-        pass
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            self.rect1.display()
+            self.assertEqual(fake_out.getvalue(), '#\n')
+            Rectangle(4, 2, 1, 3, 200).display()
+            output = "#\n\n\n\n ####\n ####\n"
+            self.assertEqual(fake_out.getvalue(), output)
 
     def test_str(self):
         """

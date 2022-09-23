@@ -50,7 +50,12 @@ class test_square(unittest.TestCase):
         """
         Method for testing the area method of the Square class.
         """
-        pass
+        self.assertEqual(self.square1.area(), 1)
+
+        self.square2 = Square(5, 0, 0, 200)
+        self.assertEqual(self.square2.area(), 25)
+
+        del self.square2
 
     def test_display(self):
         """

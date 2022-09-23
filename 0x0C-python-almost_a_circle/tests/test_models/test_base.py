@@ -29,7 +29,7 @@ class BaseTests(unittest.TestCase):
         del cls.base1
         del cls.rect1
         del cls.square1
-        # return super().tearDown()
+        return super().tearDownClass()
 
     def test_init(self):
         """
@@ -95,13 +95,37 @@ class BaseTests(unittest.TestCase):
         Method for testing the from_json_string method in the Base
         class.
         """
-        pass
+        list_input = [
+            {'id': 89, 'width': 10, 'height':4},
+            {'id': 7, 'size': 3}
+        ]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(list_output, list_input)
+
+        json_list_input = Rectangle.to_json_string([])
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(list_output, [])
+
+        list_output = Base.from_json_string(None)
+        self.assertEqual(list_output, [])
+
+        self.assertRaises(TypeError, Rectangle.from_json_string, 5)
 
     def test_create(self):
         """
         Method for testing the create method in the Base class.
         """
-        pass
+        rect1_dict = {'height': 1, 'width': 1, 'id': 400}
+        r1 = self.rect1.create(**rect1_dict)
+        self.assertTrue(type(r1), Rectangle)
+
+        square1_dict = {'size': 1, 'id': 500}
+        s1 = self.square1.create(**square1_dict)
+        self.assertTrue(type(s1), Square)
+
+        del r1
+        del s1
 
     def test_load_from_file(self):
         """

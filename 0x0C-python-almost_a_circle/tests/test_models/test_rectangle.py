@@ -57,6 +57,11 @@ class test_rectangle(unittest.TestCase):
         """
         self.assertEqual(self.rect1.area(), 1)
 
+        self.rect2 = Rectangle(5, 2, 0, 0, 200)
+        self.assertEqual(self.rect2.area(), 10)
+
+        del self.rect2
+
     def test_display(self):
         """
         Method for testing the display method of the Rectangle class.

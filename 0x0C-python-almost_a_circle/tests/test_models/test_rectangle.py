@@ -39,7 +39,7 @@ class test_rectangle(unittest.TestCase):
         """
         Method for testing the area method of the Rectangle class.
         """
-        self.assertEqual()
+        pass
 
     def test_display(self):
         """

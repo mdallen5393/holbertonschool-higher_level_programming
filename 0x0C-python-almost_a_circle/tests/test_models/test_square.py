@@ -46,23 +46,6 @@ class test_square(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square(1, 0, "0", 100)
 
-    def test_area(self):
-        """
-        Method for testing the area method of the Square class.
-        """
-        self.assertEqual(self.square1.area(), 1)
-
-        self.square2 = Square(5, 0, 0, 200)
-        self.assertEqual(self.square2.area(), 25)
-
-        del self.square2
-
-    def test_display(self):
-        """
-        Method for testing the display method of the Square class.
-        """
-        pass
-
     def test_str(self):
         """
         Method for testing the __str__ method of the Square class.

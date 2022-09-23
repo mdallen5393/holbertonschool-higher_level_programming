@@ -72,7 +72,7 @@ class test_rectangle(unittest.TestCase):
         """
         Method for testing the __str__ method of the Rectangle class.
         """
-        pass
+        self.assertEqual(str(self.rect1), '[Rectangle] (100) 0/0 - 1/1')
 
     def test_update(self):
         """

@@ -99,7 +99,7 @@ class test_rectangle(unittest.TestCase):
         """
         rect1_dict = {'x': 0, 'y': 0, 'id': 100, 'height': 1, 'width': 1}
         self.assertEqual(self.rect1.to_dictionary(), rect1_dict)
-
+        self.assertTrue(type(self.rect1.to_dictionary()), dict)
 
 if __name__ == '__main__':
     unittest.main()

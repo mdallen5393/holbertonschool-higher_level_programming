@@ -3,20 +3,80 @@
 Unittest module for Square class.
 """
 import unittest
-# TODO: max_integer = __import__('6-max_integer').max_integer
-
+from models.square import Square
 
 class test_square(unittest.TestCase):
     """
     Class test_square that provides unit testing for the `Square`
     class.
     """
-    def test_values(self):
+    @classmethod
+    def setUpClass(cls):
         """
-        Value unit tests.
+        setUp method for testing the Square class.
         """
-        # TODO: add self.assertEqual(max_integer("String"), 't')
+        cls.square1 = Square(1, 0, 0, 100)
+
+    @classmethod
+    def tearDownClass(cls):
+        """
+        tearDown method for testing the Square class.
+        """
+        del cls.square1
+        return super().tearDownClass()
+
+    def test_init(self):
+        """
+        Method for testing initialization of the Square class.
+        """
+        self.assertEqual(self.square1.id, 100)
+        self.assertEqual(self.square1.size, 1)
+        self.assertEqual(self.square1.x, 0)
+        self.assertEqual(self.square1.y, 0)
+        with self.assertRaises(ValueError):
+            Square(-1, 0, 0, 100)
+        with self.assertRaises(ValueError):
+            Square(1, -1, 0, 100)
+        with self.assertRaises(ValueError):
+            Square(1, 0, -1, 100)
+        with self.assertRaises(TypeError):
+            Square("1", 0, 0, 100)
+        with self.assertRaises(TypeError):
+            Square(1, "0", 0, 100)
+        with self.assertRaises(TypeError):
+            Square(1, 0, "0", 100)
+
+    def test_area(self):
+        """
+        Method for testing the area method of the Square class.
+        """
         pass
+
+    def test_display(self):
+        """
+        Method for testing the display method of the Square class.
+        """
+        pass
+
+    def test_str(self):
+        """
+        Method for testing the __str__ method of the Square class.
+        """
+        pass
+
+    def test_update(self):
+        """
+        Method for testing the update method of the Square class.
+        """
+        pass
+
+    def test_to_dictionary(self):
+        """
+        Method for testing the to_dictionary method of the Square
+        class.
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

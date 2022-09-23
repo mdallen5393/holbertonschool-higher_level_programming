@@ -50,7 +50,7 @@ class test_square(unittest.TestCase):
         """
         Method for testing the __str__ method of the Square class.
         """
-        pass
+        self.assertEqual(str(self.square1), '[Square] (100) 0/0 - 1')
 
     def test_update(self):
         """
@@ -67,7 +67,6 @@ class test_square(unittest.TestCase):
         self.assertEqual(self.square1.x, 0)
         self.assertEqual(self.square1.y, 0)
 
-
     def test_to_dictionary(self):
         """
         Method for testing the to_dictionary method of the Square
@@ -76,7 +75,6 @@ class test_square(unittest.TestCase):
         square1_dict = {'x': 0, 'y': 0, 'id': 100, 'size': 1}
         self.assertEqual(self.square1.to_dictionary(), square1_dict)
         self.assertTrue(type(self.square1.to_dictionary()), dict)
-
 
 if __name__ == '__main__':
     unittest.main()

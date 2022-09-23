@@ -124,6 +124,8 @@ class BaseTests(unittest.TestCase):
         s1 = self.square1.create(**square1_dict)
         self.assertTrue(type(s1), Square)
 
+        self.assertRaises(TypeError, self.square1.create, 1)
+
         del r1
         del s1
 

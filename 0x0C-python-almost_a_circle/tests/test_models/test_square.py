@@ -75,6 +75,7 @@ class test_square(unittest.TestCase):
         """
         square1_dict = {'x': 0, 'y': 0, 'id': 100, 'size': 1}
         self.assertEqual(self.square1.to_dictionary(), square1_dict)
+        self.assertTrue(type(self.square1.to_dictionary()), dict)
 
 
 if __name__ == '__main__':

@@ -84,8 +84,13 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(self.rect1.height, 3)
         self.assertEqual(self.rect1.x, 4)
         self.assertEqual(self.rect1.y, 5)
-        self.rect1.update(1, 1, 0, 0, 100)
 
+        self.rect1.update(id=100, width=1, height=1, x=0, y=0)
+        self.assertEqual(self.rect1.id, 100)
+        self.assertEqual(self.rect1.width, 1)
+        self.assertEqual(self.rect1.height, 1)
+        self.assertEqual(self.rect1.x, 0)
+        self.assertEqual(self.rect1.y, 0)
 
     def test_to_dictionary(self):
         """

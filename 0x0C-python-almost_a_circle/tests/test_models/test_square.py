@@ -56,7 +56,17 @@ class test_square(unittest.TestCase):
         """
         Method for testing the update method of the Square class.
         """
-        pass
+        self.square1.update(89, 2, 3, 4)
+        self.assertEqual(self.square1.id, 89)
+        self.assertEqual(self.square1.size, 2)
+        self.assertEqual(self.square1.x, 3)
+        self.assertEqual(self.square1.y, 4)
+        self.square1.update(size=1, y=0, x=0, id=100)
+        self.assertEqual(self.square1.id, 89)
+        self.assertEqual(self.square1.size, 2)
+        self.assertEqual(self.square1.x, 3)
+        self.assertEqual(self.square1.y, 4)
+
 
     def test_to_dictionary(self):
         """

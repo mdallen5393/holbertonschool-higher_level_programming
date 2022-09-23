@@ -62,10 +62,10 @@ class test_square(unittest.TestCase):
         self.assertEqual(self.square1.x, 3)
         self.assertEqual(self.square1.y, 4)
         self.square1.update(size=1, y=0, x=0, id=100)
-        self.assertEqual(self.square1.id, 89)
-        self.assertEqual(self.square1.size, 2)
-        self.assertEqual(self.square1.x, 3)
-        self.assertEqual(self.square1.y, 4)
+        self.assertEqual(self.square1.id, 100)
+        self.assertEqual(self.square1.size, 1)
+        self.assertEqual(self.square1.x, 0)
+        self.assertEqual(self.square1.y, 0)
 
 
     def test_to_dictionary(self):

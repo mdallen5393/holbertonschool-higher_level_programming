@@ -78,7 +78,14 @@ class test_rectangle(unittest.TestCase):
         """
         Method for testing the update method of the Rectangle class.
         """
-        pass
+        self.rect1.update(89, 2, 3, 4, 5)
+        self.assertEqual(self.rect1.id, 89)
+        self.assertEqual(self.rect1.width, 2)
+        self.assertEqual(self.rect1.height, 3)
+        self.assertEqual(self.rect1.x, 4)
+        self.assertEqual(self.rect1.y, 5)
+        self.rect1.update(1, 1, 0, 0, 100)
+
 
     def test_to_dictionary(self):
         """

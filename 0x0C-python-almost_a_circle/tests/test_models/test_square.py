@@ -73,7 +73,8 @@ class test_square(unittest.TestCase):
         Method for testing the to_dictionary method of the Square
         class.
         """
-        pass
+        square1_dict = {'x': 0, 'y': 0, 'id': 100, 'size': 1}
+        self.assertEqual(self.square1.to_dictionary(), square1_dict)
 
 
 if __name__ == '__main__':

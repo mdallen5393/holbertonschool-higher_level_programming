@@ -97,7 +97,8 @@ class test_rectangle(unittest.TestCase):
         Method for testing the to_dictionary method of the Rectangle
         class.
         """
-        pass
+        rect1_dict = {'x': 0, 'y': 0, 'id': 100, 'height': 1, 'width': 1}
+        self.assertEqual(self.rect1.to_dictionary(), rect1_dict)
 
 
 if __name__ == '__main__':

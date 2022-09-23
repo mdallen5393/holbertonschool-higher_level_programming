@@ -34,6 +34,22 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(self.rect1.height, 1)
         self.assertEqual(self.rect1.x, 0)
         self.assertEqual(self.rect1.y, 0)
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 1, 0, 0, 100)
+        with self.assertRaises(ValueError):
+            Rectangle(1, -1, 0, 0, 100)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 1, -1, 0, 100)
+        with self.assertRaises(ValueError):
+            Rectangle(1, 1, 0, -1, 100)
+        with self.assertRaises(TypeError):
+            Rectangle("1", 1, 0, 0, 100)
+        with self.assertRaises(TypeError):
+            Rectangle(1, "1", 0, 0, 100)
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, "0", 0, 100)
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1, 0, "0", 100)
 
     def test_area(self):
         """

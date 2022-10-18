@@ -15,8 +15,8 @@ def list_states():
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
 
-    cur.execute(f"SELECT * FROM states WHERE name = '{sys.argv[4]}' \
-ORDER BY id;")
+    cur.execute("SELECT * FROM states WHERE name = '{}' \
+ORDER BY id;".format(sys.argv[4]))
     results = cur.fetchall()
 
     cur.close()

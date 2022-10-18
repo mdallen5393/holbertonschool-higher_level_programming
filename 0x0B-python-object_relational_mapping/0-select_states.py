@@ -13,3 +13,6 @@ cur.execute("SELECT * FROM states ORDER BY id")
 results = cur.fetchall()
 for row in results:
     print(row)
+
+cur.close()
+db.close()

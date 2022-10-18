@@ -25,5 +25,6 @@ def list_states():
         if 'N' in row[1]:
             print(row)
 
+
 if __name__ == "__main__":
     list_states()

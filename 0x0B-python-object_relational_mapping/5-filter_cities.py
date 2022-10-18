@@ -19,7 +19,8 @@ def cities_by_states():
                    FROM cities \
                   WHERE state_id = (SELECT id \
                                       FROM states \
-                                    WHERE name=%(target)s);",
+                                    WHERE name=%(target)s) \
+                  ORDER BY id;",
                 {'target': sys.argv[4]})
 
     results = cur.fetchall()

@@ -20,11 +20,9 @@ def list_states():
     cur.close()
     db.close()
 
-
     for row in results:
         if row[1][0] == 'N':
             print(row)
-
 
 
 if __name__ == "__main__":

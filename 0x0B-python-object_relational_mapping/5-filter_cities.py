@@ -28,6 +28,10 @@ def cities_by_states():
     cur.close()
     db.close()
 
+    if len(results) <= 0:
+        print()
+        return
+
     for i in range(len(results) - 1):
         print(results[i][0], end=', ')
     print(results[len(results) - 1][0])

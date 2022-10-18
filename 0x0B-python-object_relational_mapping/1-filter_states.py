@@ -22,7 +22,7 @@ def list_states():
     db.close()
 
     for row in results:
-        if 'N' in row[1]:
+        if row[1][0] == 'N':
             print(row)
 
 

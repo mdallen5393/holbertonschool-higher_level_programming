@@ -18,7 +18,7 @@ def safe_filter_states():
     cur = db.cursor()
 
     cur.execute('SELECT * FROM states WHERE BINARY name = %(state)s \
-ORDER BY id;', {'state':sys.argv[4]})
+ORDER BY id;', {'state': sys.argv[4]})
 
     results = cur.fetchall()
 

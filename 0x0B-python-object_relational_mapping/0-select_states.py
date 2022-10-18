@@ -23,5 +23,6 @@ def list_states():
     cur.close()
     db.close()
 
+
 if __name__ == "__main__":
     list_states()

@@ -20,7 +20,7 @@ def cities_by_states():
                   WHERE state_id = (SELECT id \
                                       FROM states \
                                     WHERE name=%(target)s);",
-                {'target':sys.argv[4]})
+                {'target': sys.argv[4]})
 
     results = cur.fetchall()
 
@@ -34,4 +34,3 @@ def cities_by_states():
 
 if __name__ == "__main__":
     cities_by_states()
-

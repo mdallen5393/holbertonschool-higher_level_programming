@@ -14,16 +14,19 @@ def list_states():
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
-
-    cur.execute("SELECT * FROM states WHERE name = '{}' \
-ORDER BY id;".format(sys.argv[4]))
+    '''
+        cur.execute("SELECT * FROM states WHERE name = '{}' \
+    ORDER BY id;".format(sys.argv[4]))
+    '''
+    cur.execute("SELECT * FROM states ORDER BY id;")
     results = cur.fetchall()
 
     cur.close()
     db.close()
 
     for row in results:
-        print(row)
+        if row[1] == sys.argv[4]
+            print(row)
 
 
 if __name__ == "__main__":

@@ -17,12 +17,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).first()
-    if state is None:
-        print("Nothing")
-    else:
-        print(f"{state.id}: {state.name}")
-
     for state in session.query(State
                                ).order_by(State.id).filter(State.name.
                                                            contains('a')):

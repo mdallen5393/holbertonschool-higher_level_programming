@@ -22,5 +22,5 @@ if __name__ == "__main__":
         state = session.query(State)\
             .order_by(State.id).filter(State.name == sys.argv[4]).one()
         print(state.id)
-    except:
+    except Exception:
         print("Not found")

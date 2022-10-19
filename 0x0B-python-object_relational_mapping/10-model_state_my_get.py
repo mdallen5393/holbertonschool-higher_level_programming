@@ -18,10 +18,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-
     try:
-        state = session.query(State
-                            ).order_by(State.id).filter(State.name == sys.argv[4]).one()
+        state = session.query(State)\
+            .order_by(State.id).filter(State.name == sys.argv[4]).one()
         print(state.id)
     except MultipleResultsFound:
         print("Not found")

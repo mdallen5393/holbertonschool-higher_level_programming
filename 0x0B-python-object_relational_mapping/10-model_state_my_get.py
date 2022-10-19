@@ -3,6 +3,7 @@
 Script to list all states in the states table.
 """
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 import sys
@@ -17,10 +18,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    qry = session.query(State
-                        ).order_by(State.id).filter(State.name == sys.argv[4])
-    if qry is not None:
-        for state in qry:
-            print(state.id)
-    else:
+
+    try:
+        state = session.query(State
+                            ).order_by(State.id).filter(State.name == sys.argv[4]).one()
+        print(state.id)
+    except MultipleResultsFound:
+        print("Not found")
+    except NoResultFound:
         print("Not found")

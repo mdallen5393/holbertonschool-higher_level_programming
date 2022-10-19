@@ -21,6 +21,6 @@ if __name__ == "__main__":
                         ).order_by(State.id).filter(State.name == sys.argv[4])
     if qry is not None:
         for state in qry:
-            print(f"{state.id}: {state.name}")
+            print(state.id)
     else:
         print("Not found")

@@ -3,7 +3,7 @@
 Script to list all states in the states table.
 """
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
+# from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 import sys

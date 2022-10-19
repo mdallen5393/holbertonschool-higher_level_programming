@@ -7,7 +7,7 @@ import MySQLdb
 import sys
 
 
-def list_states():
+def filter_states():
     """
     lists all states
     """
@@ -28,4 +28,4 @@ ORDER BY id;".format(sys.argv[4]))
 
 
 if __name__ == "__main__":
-    list_states()
+    filter_states()

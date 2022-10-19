@@ -5,7 +5,6 @@ Script to list all states in the states table.
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy.orm.exc import NoResultFound
 import sys
 
 
@@ -18,8 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    try:
-        state = session.query(State).first()
-        print(f"{state.id}: {state.name}")
-    except NoResultFound:
+    state = session.query(State).first()
+    if state is None:
         print("Nothing")
+    print(f"{state.id}: {state.name}")

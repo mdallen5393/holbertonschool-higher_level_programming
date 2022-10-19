@@ -22,4 +22,4 @@ if __name__ == "__main__":
         state = session.query(State).first()
         print(f"{state.id}: {state.name}")
     except NoResultFound:
-        print()
+        print("Nothing")

@@ -18,5 +18,7 @@ if __name__ == "__main__":
     session = Session()
 
     session.add(State(name="Louisiana"))
-    state = session.query(State).filter_by(name='Louisiana').order_by(State.id)[-1]
+    state = session.query(State)\
+        .filter_by(name='Louisiana')\
+        .order_by(State.id)[-1]
     print(state.id)

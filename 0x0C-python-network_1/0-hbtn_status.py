@@ -3,8 +3,9 @@
 Script that fetches `https://intranet.hbtn.io/status`.
 """
 if __name__ == "__main__":
-    import urllib.request
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    from urllib import request
+    req = request.Request('https://intranet.hbtn.io/status')
+    with request.urlopen(req) as response:
         html = response.read()
     print("""Body response:
     - type: {}

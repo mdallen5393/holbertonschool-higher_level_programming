@@ -9,8 +9,7 @@ if __name__ == "__main__":
     req = request.Request('https://intranet.hbtn.io/status')
     with request.urlopen(req) as response:
         html = response.read()
-        print("""Body response:
-\t- type: {}
-\t- content: {}
-\t- utf8 content: {}"""
-            .format(type(html), html, html.decode('utf8')))
+    print("Body response:")
+    print(f"\t- type: {type(html)}")
+    print(f"\t- content: {html}")
+    print(f"\t- utf8 content: {html.decode('utf8')}")

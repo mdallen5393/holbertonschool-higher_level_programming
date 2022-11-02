@@ -8,7 +8,7 @@ if __name__ == "__main__":
     with request.urlopen(req) as response:
         html = response.read()
         print("""Body response:
-        - type: {}
-        - content: {}
-        - utf8 content: {}"""
+    - type: {}
+    - content: {}
+    - utf8 content: {}"""
             .format(type(html), html, html.decode('utf8')))

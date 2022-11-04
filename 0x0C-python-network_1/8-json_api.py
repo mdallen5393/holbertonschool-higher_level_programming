@@ -15,7 +15,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 1:
         q = sys.argv[1]
 
-    http = requests.post(url, data={'q':q})
+    http = requests.post(url, data={'q': q})
     try:
         my_dict = http.json()
         id = my_dict.get('id')

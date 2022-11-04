@@ -20,7 +20,7 @@ if __name__ == "__main__":
         my_dict = http.json()
         id = my_dict.get('id')
         name = my_dict.get('name')
-        if len(dict) == 0:
+        if len(my_dict) == 0:
             print("No result")
         else:
             print("[{}] {}".format(id, name))

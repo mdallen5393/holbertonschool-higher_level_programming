@@ -22,7 +22,7 @@ if __name__ == "__main__":
         name = my_dict.get('name')
         if len(dict) == 0:
             print("No result")
-        if len(dict) != 0:
+        else:
             print("[{}] {}".format(id, name))
     except Exception as e:
         print("Not a valid JSON")

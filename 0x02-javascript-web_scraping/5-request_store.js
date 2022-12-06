@@ -4,7 +4,6 @@ const fs = require('fs');
 
 const url = process.argv[2];
 
-
 request(url, function (err, response, body) {
   if (err) throw err;
   fs.writeFile(process.argv[3], body, function (err) {

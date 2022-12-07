@@ -1,2 +1,3 @@
 #!/usr/bin/node
-$("header").css('color', '#F00')
+const $ = window.$;
+$('header').css('color', '#F00');
